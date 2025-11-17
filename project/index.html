@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --size-module: 100px;
+            --size-module2: calc(var(--size-module) / 2);    
+        }
+        .inter-headers {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            color : white;
+        }
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+        #one {
+            width: 50%;
+            height: 100%;
+            background-color: blue;
+        }
+        #two {
+            width: 50%;
+            height: 100%;
+        }
+        header {
+            width: 100%;
+            height: 50%;  
+        }      
+        main {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 50%;        }
+        #author, #studio {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        header, #author, #studio {
+            padding: 10px 0 0 10px;
+        }
+        #mXL {
+            position: relative;
+            width: 100%;
+            height: 50%;
+        }
+        #mXL>.top {
+            position: absolute;
+            height: var(--size-module);
+            background-color: lime;
+            left: var(--size-module);
+            right: var(--size-module);
+        }
+        #mXL>.bottom {
+            position: absolute;
+            height: var(--size-module);
+            background-color: lime;
+            left: var(--size-module);
+            right: var(--size-module);
+            bottom: 0;
+        }
+        #mXL>.right {
+            position: absolute;
+            bottom: var(--size-module);
+            top: var(--size-module);
+            width: var(--size-module);
+            background-color: lime;
+            right: 0;
+        }
+        #mXL>.left {
+            position: absolute;
+            bottom: var(--size-module);
+            top: var(--size-module);
+            width: var(--size-module);
+            background-color: lime;
+            left: 0;
+        }
+        #mS {
+            display: flex;
+            width: 100%;
+            height: 25%;
+        }
+        .mXS {
+            position: relative;
+            width: 50%;
+            height: 100%;
+        }
+        .mXS > .top {
+            position: absolute;
+            height: var(--size-module2);
+            background-color: lime;
+            left: var(--size-module2);
+            right: var(--size-module2);
+            top: 0;
+        }
+        .mXS > .bottom {
+            position: absolute;
+            height: var(--size-module2);
+            background-color: lime;
+            left: var(--size-module2);
+            right: var(--size-module2);
+            bottom: 0;
+        }
+        .mXS > .right {
+            position: absolute;
+            bottom: var(--size-module2);
+            top: var(--size-module2);
+            width: var(--size-module2);
+            background-color: lime;
+            right: 0;
+        }
+        .mXS > .left {
+            position: absolute;
+            bottom: var(--size-module2);
+            top: var(--size-module2);
+            width: var(--size-module2);
+            background-color: lime;
+            left: 0;
+        }
+        #mS2{
+            position: relative;
+            width: 100%;
+            height: 25%;
+            
+        }
+        #mS2 > .top {
+            position: absolute;
+            height: var(--size-module2);
+            background-color: lime;
+            left: var(--size-module2);
+            right: var(--size-module2);
+            top: 0;
+        }
+        #mS2 > .bottom {
+            position: absolute;
+            height: var(--size-module2);
+            background-color: lime;
+            left: var(--size-module2);
+            right: var(--size-module2);
+            bottom: 0;
+        }
+        #mS2 > .right {
+            position: absolute;
+            bottom: var(--size-module2);
+            top: var(--size-module2);
+            width: var(--size-module2);
+            background-color: lime;
+            right: 0;
+        }
+        #mS2 > .left {
+            position: absolute;
+            bottom: var(--size-module2);
+            top: var(--size-module2);
+            width: var(--size-module2);
+            background-color: lime;
+            left: 0;
+        }
+        @media only screen and (max-width: 375px) {
+        .container {
+        flex-direction: column;
+        height: 200vh;
+        width: 100vw;
+        }  
+        #uno,
+        #dos {
+            display: flex;
+            flex-direction: column;
+            width: 100;
+            height: 100vh;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div id="one">
+                <header>
+                    <h1 class="inter-headers">Flexible Systems</h1>
+                </header>
+                <main>
+                    <div id="author">
+                        <h2 class="inter-headers">ml</h2>
+                    </div>
+                    <div id="studio">
+                        <h2 class="inter-headers">hh</h2>
+                        <h2 class="inter-headers">BCN</h2>
+                    </div>
+                </main>
+            </div>
+        <div id="two">
+            <div id="mXL">
+                <div class="top"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+                <div class="left"></div>
+            </div>  
+            <div id="mS">
+                <div class="mXS">
+                    <div class="top"></div>
+                    <div class="right"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                </div>
+                <div class="mXS">
+                    <div class="top"></div>
+                    <div class="right"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                </div>
+            </div>
+            <div id="mS2">
+                    <div class="top"></div>
+                    <div class="right"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+        
+            </div>       
+        </div>
+    </div>
+</body>
+</html>

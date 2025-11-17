@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Visual Systems</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .container>div{
+            position: absolute;
+            display:flex;
+        }
+        .blau{
+            height: 50px;
+            flex-grow: 1;
+            background-color: blue;
+        }
+        .verd{
+            background-color: green;
+            width: 50px;
+            flex-grow: 1;
+        }
+        .top{
+            left: 50px;
+            right: 50px;
+            top:0;
+        }
+        .right{
+            
+            right: 0;
+            top:50px;
+            bottom: 50px;
+        }
+        .bottom{
+            bottom:0;
+            left: 50px;
+            right: 50px;
+        }
+        .left{
+            left: 0;
+            top:50px;
+            bottom: 50px;
+        }
+        @media (max-width:375px) {
+            .blau{
+                background-color: green;
+            }
+            .verd{
+                background-color: blue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class=" top blau"></div>
+        <div class=" right verd"></div>
+        <div class=" bottom blau"></div>
+        <div class=" left verd"></div>
+    </div>
+
+
+</body>
+</html>
